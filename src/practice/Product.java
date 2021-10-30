@@ -1,6 +1,6 @@
 package practice;
 
-public class Product {
+public class Product implements Comparable<Product> {
     public String productName;
     public int productPrice;
     public int productNumber;
@@ -18,5 +18,11 @@ public class Product {
                 ", productPrice=" + productPrice +
                 ", productNumber=" + productNumber +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(Product o) {
+        return this.productPrice - o.productPrice;
     }
 }

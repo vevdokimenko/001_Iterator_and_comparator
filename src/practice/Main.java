@@ -15,26 +15,28 @@ public class Main {
         productsList.add(product2);
         productsList.add(product3);
 
-        Arrays.sort(productsArray, new Comparator<Product>() {
-            @Override
-            public int compare(Product o1, Product o2) {
-                return o1.productPrice - o2.productPrice;
-            }
-        });
+//        Arrays.sort(productsArray, new Comparator<Product>() {
+//            @Override
+//            public int compare(Product o1, Product o2) {
+//                return o1.productPrice - o2.productPrice;
+//            }
+//        });
 
+        Arrays.sort(productsArray);
         for (Product item : productsArray) {
             System.out.println(item);
         }
 
         System.out.println("========================================");
 
-        Collections.sort(productsList, new Comparator<Product>() {
-            @Override
-            public int compare(Product o1, Product o2) {
-                return o1.productNumber - o2.productNumber;
-            }
-        });
+//        Collections.sort(productsList, new Comparator<Product>() {
+//            @Override
+//            public int compare(Product o1, Product o2) {
+//                return o1.productNumber - o2.productNumber;
+//            }
+//        });
 
+        Collections.sort(productsList);
         Iterator<Product> iter = productsList.iterator();
         while (iter.hasNext()) {
             System.out.println(iter.next());
