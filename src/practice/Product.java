@@ -23,6 +23,10 @@ public class Product implements Comparable<Product> {
 
     @Override
     public int compareTo(Product o) {
-        return this.productPrice - o.productPrice;
+        if (this.productPrice == o.productPrice) {
+            return this.productNumber - o.productNumber;
+        } else {
+            return this.productPrice - o.productPrice;
+        }
     }
 }
